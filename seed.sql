@@ -49,3 +49,270 @@ VALUES ('Crown Zenith', '2'), ('Silver Tempest', '2'), ('Lost Origin', '2'), ('P
 
 INSERT INTO products (product_name, set_id, category_id, inventory, price, description)
 VALUES ('Booster Pack (10 Cards)', '2', '8', '36', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '3', '8', '32', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Bundle', '4', '8', '9', '24.99', 'Expand your collection with this Booster Bundle containing six booster packs from Pokémon TCG: Scarlet & Violet-Paldean Fates!'), ('Booster Pack (10 Cards)', '4', '8', '4', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '5', '8', '20', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'),  ('Booster Pack (10 Cards)', '6', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '7', '8', '9', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '8', '8', '9', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Checklane Blister', '9', '8', '29', '4.49', 'Pokemon Scarlet & Violet Base Set: Checklane Blister featuring Spidops & Espathra'), ('Booster Pack (10 Cards)', '9', '8', '25', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '11', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '12', '8', '26', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '13', '8', '4', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '14', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '15', '8', '10', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '16', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '16', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '17', '8', '17', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '18', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '19', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '20', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '21', '8', '36', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '22', '8', '0', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '23', '8', '36', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.'), ('Booster Pack (10 Cards)', '24', '8', '', '4', 'One sealed blister booster pack containing 10 random cards with the artwork.')
+
+INSERT INTO
+  products (product_name, set_id, category_id, inventory, price, description)
+VALUES (
+    'Elite Trainer Box',
+    '2',
+    '2',
+    '5',
+    '49.99',
+    'Each Pokemon Twilight Masquerade Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet—Twilight Masquerade booster packs 1 full-art foil promo card featuring Teal Mask Ogerpon 65 card sleeves featuring Ogerpon 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Twilight Masquerade expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live A Festival of Mischief & Mystery!'
+  ),
+  (
+    'Elite Trainer Box',
+    '3',
+    '2',
+    '1',
+    '49.99',
+    'Each Pokemon Temporal Forces Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet—Temporal Forces booster packs 1 full-art foil promo card featuring Iron Thorns 65 card sleeves featuring Iron Leaves 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Temporal Forces expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live'
+  ),
+  (
+    'Elite Trainer Box',
+    '3',
+    '2',
+    '1',
+    '42.00',
+    'Each Pokémon Temporal Forces Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet—Temporal Forces booster packs 1 full-art foil promo card featuring Flutter Mane 65 card sleeves featuring Walking Wake 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Temporal Forces expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live'
+  ),
+  (
+    'Elite Trainer Box',
+    '4',
+    '2',
+    '5',
+    '49.99',
+    'Each Paldean Fates Elite Trainer Box includes nine Scarlet & Violet—Paldean Fates booster packs, one Shiny illustration rare promo card featuring Mimikyu and various gameplay accessories. The Pokémon TCG: Scarlet & Violet-Paldean Fates Elite Trainer Box full contents include: 9 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs 1 full-art foil promo card featuring Shiny Mimikyu 65 card sleeves featuring Shiny Mimikyu 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet-Paldean Fates expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live'
+  ),
+  (
+    'Elite Trainer Box',
+    '5',
+    '2',
+    '1',
+    '40.00',
+    'The Pokémon TCG: Scarlet & Violet—Paradox Rift Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet—Paradox Rift booster packs 1 full-art foil promo card featuring Scream Tail or Iron Bundle 65 card sleeves featuring Roaring Moon or Iron Valiant 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Paradox Rift expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live'
+  ),
+  (
+    'Elite Trainer Box',
+    '7',
+    '2',
+    '3',
+    '49.99',
+    'Each Obsidian Flames Elite Trainer Box contains: 9 Pokémon TCG: Scarlet & Violet—Obsidian Flames booster packs 1 full-art foil promo card featuring Charmander 65 card sleeves featuring Charmander 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Obsidian Flames expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized Online code card.'
+  ),
+  (
+    'Elite Trainer Box',
+    '8',
+    '2',
+    '1',
+    '49.99',
+    'The Pokémon TCG: Scarlet & Violet Paldea Evolved Elite Trainer Box includes: Elite Trainer Box will include a special Pikachu promo. Contents: 9 Pokémon TCG: Scarlet & Violet Paldea Evolved booster packs 1 full-art foil promo card featuring Pikachu 65 card sleeves featuring Sprigatito, Fuecoco, and Quaxly 45 Pokémon TCG Energy cards A player''s guide to the Scarlet & Violet—Paldea Evolved expansion 6 damage-counter dice 1 competition-legal coin-flip die 2 plastic condition markers A collector''s box to hold everything, with 4 dividers to keep it organized A code card for Pokémon Trading Card Game Live'
+  ),
+  (
+    'Elite Trainer Box',
+    '9',
+    '2',
+    '1',
+    '44.99',
+    'The Pokémon TCG: Scarlet & Violet Base Set Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet booster packs, 1 full-art foil promo card featuring Miraidon, 65 card sleeves featuring Miraidon, 45 Pokémon TCG Energy cards, A player''s guide to the Scarlet & Violet expansion, 6 damage-counter dice, 1 competition-legal coin-flip die, 2 plastic condition markers, A collector''s box to hold everything, with 4 dividers to keep it organized, A code card for Pokémon Trading Card Game Live.'
+  ),
+  (
+    'Elite Trainer Box',
+    '9',
+    '2',
+    '2',
+    '44.99',
+    'The Pokémon TCG: Scarlet & Violet Base Set Elite Trainer Box includes: 9 Pokémon TCG: Scarlet & Violet booster packs, 1 full-art foil promo card featuring Koraidon, 65 card sleeves featuring Koraidon, 45 Pokémon TCG Energy cards, A player''s guide to the Scarlet & Violet expansion, 6 damage-counter dice, 1 competition-legal coin-flip die, 2 plastic condition markers, A collector''s box to hold everything, with 4 dividers to keep it organized, A code card for Pokémon Trading Card Game Live.'
+  ),
+  (
+    'Elite Trainer Box',
+    '11',
+    '2',
+    '2',
+    '45.00',
+    'The Legendary heroes Zacian and Zamazenta shine with new VSTAR Powers, and an all-star assembly of Pokémon and Trainers arrive to celebrate the era of Pokémon V! Discover dazzling special illustrations in the Galarian Gallery, and wield the strength of rare and powerful Pokémon, including Charizard as both a Pokémon VSTAR and Radiant Pokémon. Many more Pokémon have their own tales to tell in battle as the Sword & Shield Series reaches its towering peak in the Pokémon TCG: Crown Zenith expansion! Crown Zenith Elite Trainer Box: Includes 10 Crown Zenith booster packs, one special art card featuring Lucario VSTAR and various gameplay accessories'
+  ),
+  (
+    'Elite Trainer Box',
+    '12',
+    '2',
+    '3',
+    '40.00',
+    'The Pokémon TCG: Sword & Shield—Silver Tempest Elite Trainer Box includes: 8 Pokémon TCG: Sword & Shield—Silver Tempest booster packs 65 card sleeves 45 Pokémon TCG Energy cards A player''s guide to the Sword & Shield—Silver Tempest expansion A Pokémon TCG rulebook 6 damage-counter dice 1 competition-legal coin-flip die 2 acrylic condition markers 1 acrylic VSTAR marker A collector''s box to hold everything, with 4 dividers to keep it organized'
+  ),
+  (
+    'Elite Trainer Box',
+    '13',
+    '2',
+    '0',
+    '40.00',
+    'The Pokémon TCG: Sword & Shield—Lost Origin Elite Trainer Box includes: 8 Pokémon TCG: Sword & Shield—Lost Origin booster packs 65 card sleeves 45 Pokémon TCG Energy cards A player''s guide to the Sword & Shield—Lost origin expansion A Pokémon TCG rulebook 6 damage-counter dice 1 competition-legal coin-flip die 2 acrylic condition markers 1 acrylic VSTAR marker A collector''s box to hold everything, with 4 dividers to keep it organized'
+  ),
+  (
+    'Elite Trainer Box',
+    '22',
+    '2',
+    '0',
+    '59.99',
+    'The Pokemon TCG: Shining Fates Elite Trainer Box includes: 10 Pokemon TCG: Shining Fates booster packs 1 foil promo card featuring Eevee VMAX 65 card sleeves featuring Gigantamax Eevee 45 Pokemon TCG Energy cards A player''s guide to the Shining Fates expansion A Pokemon TCG rulebook 6 damage-counter dice 1 competition-legal coin-flip die 2 acrylic condition markers A collector''s box to hold everything, with 4 dividers to keep it organised A code card for the Pokemon Trading Card Game Online'
+  )
+
+  INSERT INTO
+  products (product_name, category_id, set_id, inventory, price, description)
+  VALUES
+  ('Paldea Adventure Chest','5','10','3','52.99','Pokemon Paldea Adventure Chest contains springtime Surprises with Pokémon Friends!
+
+A world of adventure awaits Pokémon Trainers in the Paldea region! Gear up for battle with a big handful of ready-to-play promo cards featuring cute yet feisty Pokémon, then open up a set of booster packs to find even more friends! Along the way, you''ll get to decorate your gear with tech stickers, show off your collection with a mini portfolio, and give a squishy toy Pikachu a squeeze!
+
+The Pokémon TCG: Paldea Adventure Chest includes:
+
+7 foil promo cards featuring Pikachu, Sprigatito ex, Pawmi, Pawmo, Pawmot ex, Tandamaus, and Maushold ex
+1 sheet of tech stickers
+1 mini portfolio
+1 squishy toy Pikachu
+6 Pokémon TCG booster packs
+A code card for Pokémon TCG Live'),
+('Mabosstiff ex', '5', '10', '1', '18.50', 'Play Like a Boss with Mabosstiff ex!
+
+Mabosstiff is usually gentle, but it can appear intimidating while protecting its allies! Join forces with this loyal Pokémon and deliver a daunting blow to your opponents. You''ll find Mabosstiff ex here as a foil promo card in playable and oversize versions, along with the Rascal Pokémon Maschiff.
+
+The Pokémon TCG: Mabosstiff ex Box includes:
+
+1 foil promo card featuring Mabosstiff ex
+1 foil card featuring Maschiff
+1 oversize foil card featuring Mabosstiff ex
+4 Pokémon TCG booster packs
+A code card for Pokémon TCG Live'),
+('Shiny Great Tusk ex (5 Boosters)', '4', '6', '1', '28.99', 'The Pokémon TCG: Scarlet & Violet-Paldean Fates Tin includes:
+
+1 foil promo card featuring Shiny Great Tusk ex
+5 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+A code card for Pokémon TCG Live'),
+('Shiny Iron Treads ex (5 Boosters)', '4', '6', '1', '28.99', 'The Pokémon TCG: Scarlet & Violet-Paldean Fates Tin includes:
+
+1 foil promo card featuring Shiny Iron Treads ex
+5 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+A code card for Pokémon TCG Live'),
+('Shiny Iron Treads ex (4 Boosters)', '4', '6', '1', '25.00', 'The Pokémon TCG: Scarlet & Violet-Paldean Fates Tin includes:
+
+1 foil promo card featuring Shiny Great Tusk ex
+4 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+A code card for Pokémon TCG Live'),
+('Shiny Skeledirge ex', '3', '3', '2', '42.50', '1 etched foil promo card featuring Shiny Skeledirge ex
+1 etched foil promo card featuring Shiny Crocalor
+1 etched foil promo card featuring Shiny Fuecoco
+1 oversize foil card featuring Shiny Skeledirge ex
+8 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+1 magnetic 3-card protector with base
+A code card for Pokémon TCG Live'),
+('Shiny Meowscarada ex', '3', '3', '2', '42.50', '1 etched foil promo card featuring Shiny Meowscarada ex
+1 etched foil promo card featuring Shiny Floragato
+1 etched foil promo card featuring Shiny Sprigatito
+1 oversize foil card featuring Shiny Meowscarada ex
+8 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+1 magnetic 3-card protector with base
+A code card for Pokémon TCG Live'),
+('Shiny Quaquaval ex', '3', '3', '2', '42.50', '1 etched foil promo card featuring Shiny Quaquaval ex
+1 etched foil promo card featuring  Shiny Quaxwell
+1 etched foil promo card featuring Shiny Quaxly
+1 oversize foil card featuring Shiny Quaquaval ex
+8 Pokémon TCG: Scarlet & Violet-Paldean Fates booster packs
+1 magnetic 3-card protector with base
+A code card for Pokémon TCG Live'),
+('151', '4', '6', '2', '115.00', 'Mythical Treasures Await!
+The Mythical Pokémon Mew holds many secrets of the Pokémon world, and usually only the luckiest of Trainers encounter it. But now you can add it to your own Pokédex along with even more Kanto Pokémon inside a bounty of booster packs from the Scarlet & Violet—151 expansion! Mew ex appears here as both playable and collectible metal cards, and you''ll also find a beautifully illustrated promo card featuring Mewtwo, a durable playmat and deck box, and more.
+
+The Pokémon TCG:Scarlet & Violet—151 Ultra-Premium Collection includes:
+
+1 etched foil promo card featuring Mew ex
+1 full-art foil promo card featuring Mewtwo
+1 etched metal card featuring Mew ex
+1 playmat
+1 deck box
+1 metallic coin featuring Mew
+6 damage-counter dice
+2 plastic condition markers
+16 booster packs from Pokémon TCG: Scarlet & Violet—151
+A code card for Pokémon TCG Live'),
+('Iron Valiant ex', '5', '5', '3','18.50', 'Each Pokémon TCG: Iron Valiant ex Box includes:
+
+1 foil promo card featuring Iron Valiant ex
+1 oversize foil card featuring Iron Valiant ex
+1 foil card featuring Iron Moth
+1 foil Trainer card featuring Future Booster Energy Capsule
+4 Pokémon TCG booster packs
+A code card for Pokémon TCG Live'),
+('Roaring Moon ex', '5', '5', '3', '18.50', 'Each Pokémon TCG: Roaring Moon ex Box includes:
+
+1 foil promo card featuring Roaring Moon ex
+1 oversize foil card featuring Roaring Moon ex
+1 foil card featuring Brute Bonnet
+1 foil Trainer card featuring Ancient Booster Energy Capsule
+4 Pokémon TCG booster packs
+A code card for Pokémon TCG Live'),
+('Charizard, Meowscarada, Skeledirge, and Quaquaval (Autumn 2023)', '10', '7', '5', '29.99', 'The Pokémon Trading Card Game: Collector Chest includes:
+
+6 Pokémon TCG booster packs
+3 foil cards featuring Meowscarada, Skeledirge, and Quaquaval
+1 cool Pokémon coin
+4 colorful sticker sheets
+1 mini portfolio to store your favorite cards
+1 code card for Pokémon TCG Live'),
+('Charizard ex', '3', '28', '4', '44.99', 'The Pokémon TCG: Charizard ex Premium Collection includes:
+
+1 etched foil promo card featuring Charizard ex
+2 foil cards featuring Charmander and Charmeleon
+6 Pokémon TCG booster packs
+1 magnetic card protector with display base
+65 card sleeves featuring Charizard as a Tera Pokémon
+A code card for Pokémon TCG Live'),
+('Pikachu and Zekrom GX', '3', '28', '1', '80.00', 'The Pokémon TCG: Pikachu & Zekrom-GX Premium Collection includes:
+
+1 gold foil card featuring Pikachu & Zekrom-GX
+1 oversize card featuring Pikachu & Zekrom-GX, suitable for display
+10 Pokémon TCG booster packs
+A code card for the Pokémon Trading Card Game Online'),
+('Darkrai V Star', '3', '28', '2', '60.00', 'The Pokémon TCG: Darkrai VSTAR Premium Collection includes:
+
+1 etched foil card featuring Darkrai VSTAR
+
+1 foil card featuring Darkrai V
+
+1 oversize foil card featuring Darkrai VSTAR
+
+8 Pokémon TCG booster packs
+
+1 VSTAR marker
+
+A code card usable in either the Pokémon TCG Online or Pokémon TCG Live'),
+('12.5 Mini (1 Tin)', '6', '11', '1', '10.00', 'Each Pokemon TCG Crown Zenith Mini Tin includes;
+
+ 
+
+2 Pokemon TCG Crown Zenith booster packs
+1 sticker sheet
+1 Pokemon art card of the tin design (collect and combine all five to create a full scene artwork)'),
+('(Spring 2023)', '7', '10', '2', '35.99', 'The Pokémon Trading Card Game: Collector Chest includes:
+
+6 Pokémon TCG booster packs
+3 foil cards featuring Sprigatito, Fuecoco, and Quaxly
+A cool Pokémon coin
+4 colorful sticker sheets
+A mini portfolio to store your favorite cards
+A code card for Pokémon TCG Live'),
+('Pikachu VMAX', '5', '11', '1', '29.00', 'Includes five Crown Zenith booster packs, one etched promo card and one oversize promo card featuring Pikachu VMAX and one foil promo card featuring Pikachu V
+
+The Legendary heroes Zacian and Zamazenta shine with new VSTAR Powers, and an all-star assembly of Pokémon and Trainers arrive to celebrate the era of Pokémon V! Discover dazzling special illustrations in the Galarian Gallery, and wield the strength of rare and powerful Pokémon, including Charizard as both a Pokémon VSTAR and Radiant Pokémon. Many more Pokémon have their own tales to tell in battle as the Sword & Shield Series reaches its towering peak in the Pokémon TCG: Crown Zenith expansion!'),
+('Kleavor V Star', '3', '28', '1', '37.99', 'Full Art promo Kleavor V
+Full Art promo Kleavor VSTAR
+Collector''s pin featuring Kleavor
+5x Pokemon TCG booster packs
+A code card for the Pokémon Trading Card Game Online
+Jumbo/Oversized Kleavor VSTAR
+an acrylic VSTAR counter'),
+('Spring V Heroes (2022 Espeon V)', '6', '28', '3', '19.99', 'In this tin, you''ll find:
+
+• 4 Pokémon TCG booster packs
+
+• A code card for the Pokemon Trading Card Game Online'),
+('Celebrations', '7', '18', '1', '59.99', 'Product Contents: Six Celebrations four-card booster packs, two additional Pokémon TCG booster packs, three foil promo cards featuring Mimikyu δ (Delta Species), Light Toxtricity, and Hydreigon C; four colorful sticker sheets, a mini portfolio to store cards, a Pokémon coin, and a Pokémon notepad.')

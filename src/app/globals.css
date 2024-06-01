@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --main-electric-purple: #c800ff;
+  --main-canary-yellow: #ffea00;
+  --secondary-uranian-blue: #a9def9;
+  --secondary-mauve-purple: #e4c1f9;
+  --tertiary-madder-red: #a31621;
+  --tertiary-mint-green: #71b48d;
+  --tertiary-coral-orange: #fc7753;
+}
+
+header {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
+
+nav {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
+
+.product-card {
+  min-width: 15rem;
+}

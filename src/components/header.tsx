@@ -1,15 +1,16 @@
 import Image from "next/image";
+import KazamLogo from "../../public/images/Kazam_Cards_edited.png";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <>
-      <header className=" items-center py-4 px-8 bg-[#f7e219]">
+      <header className=" items-center py-4 px-8">
         <div>
           <Image
-            src="/images/Kazam_Cards_edited.png"
+            src={KazamLogo}
             alt="Picture of Logo"
-            height={200}
-            width={200}
+            className="h-[5rem] w-auto"
           />
         </div>
         <div className="flex flex-col items-center">
@@ -17,6 +18,17 @@ export default function Header() {
           <p>your one stop PKMN shop</p>
         </div>
       </header>
+      <nav className="flex justify-evenly">
+        <Link className="nav-link" href="/">
+          Homey Home Page
+        </Link>
+        <Link className="nav-link" href="/categories">
+          Categories
+        </Link>
+        <Link className="nav-link" href="/about">
+          About
+        </Link>
+      </nav>
     </>
   );
 }

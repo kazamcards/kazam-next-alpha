@@ -1,14 +1,17 @@
+import ProductDisplay from "@/components/ProductDisplay";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
-        <div className="border border-black bg-[#c907f7]">
+        <div className="recently-added border border-black  h-auto overflow-scroll">
           <h1> Recently Added</h1>
+          <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
+            {" "}
+            <ProductDisplay />
+          </div>
         </div>
-        <div className="border border-black bg-[#c907f7]">
+        <div className="top-sellers border border-black h-96">
           <h1> Top Sellers </h1>
         </div>
       </main>

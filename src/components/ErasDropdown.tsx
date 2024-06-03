@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-// Slugify function. Thanks GPT
+// Slugify function. Bit of nice UI so the user can see where they are in the URL. Thanks GPT.
 function slugify(text) {
   return text
     .toString()
@@ -15,6 +15,8 @@ function slugify(text) {
 }
 
 export default function ErasDropdown({ eras }) {
+  // Handles drop down menu being visible
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {

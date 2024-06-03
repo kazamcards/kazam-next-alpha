@@ -1,21 +1,21 @@
 import NextAuth from "next-auth";
-import GitHub from "next-auth/providers/github";
-import PostgresAdapter from "@auth/pg-adapter";
-import { db } from "./db";
+import Google from "next-auth/providers/google";
 
-export const { auth, handlers, signOut, signIn } = NextAuth({
-  adapter: PostgresAdapter(db),
+export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
-    GitHub({
+    Google({
       profile(profile) {
         return { role: profile.role ?? "user" };
       },
     }),
   ],
-  trustHost: true,
   callbacks: {
-    session: async ({ session, user }) => {
-      session.user.id = user.id;
+    jwt({ token, user }) {
+      if (user) token.role = user.role;
+      return token;
+    },
+    session({ session, token }) {
+      session.user.role = token.role;
       return session;
     },
   },

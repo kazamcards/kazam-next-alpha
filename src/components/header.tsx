@@ -4,9 +4,10 @@ import KazamLogo from "../../public/images/Kazam_Cards_edited.png";
 import Link from "next/link";
 // Imports to query the database:
 import { allCategories } from "@/app/lib/AllCategories";
+import { allEras } from "@/app/lib/AllEras";
+// Imports for Components:
 import CategoriesDropdown from "./CategoriesDropdown";
 import ErasDropdown from "./ErasDropdown";
-import { allEras } from "@/app/lib/AllEras";
 
 export default async function Header() {
   const categories = await allCategories();
@@ -35,9 +36,6 @@ export default async function Header() {
         <Link className="nav-link" href="/">
           Homey Home Page
         </Link>
-        {/* <Link className="nav-link" href="/categories">
-          Categories
-        </Link> */}
         <CategoriesDropdown categories={categories} />
         <ErasDropdown eras={eras} />
         <Link className="nav-link" href="/about">

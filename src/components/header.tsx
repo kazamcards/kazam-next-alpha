@@ -17,7 +17,7 @@ export default function Header() {
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold">Kazam Cards</h1>
-          <p>your one stop PKMN shop</p>
+          <p>Your one stop PKMN shop</p>
         </div>
       </header>
       <nav className="flex justify-evenly">

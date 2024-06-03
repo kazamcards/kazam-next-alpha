@@ -5,15 +5,15 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <header className=" items-center py-4 px-8">
+      <header className="items-center py-4 px-8">
         <div>
-          <a href="/">
+          <Link href="/">
             <Image
               src={KazamLogo}
               alt="Picture of Logo"
               className="h-[5rem] w-auto"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold">Kazam Cards</h1>

@@ -14,7 +14,7 @@ function slugify(text) {
     .replace(/-+$/, ""); // Trim - from end of text
 }
 
-export default function CategoriesDropdown({ categories }) {
+export default function ErasDropdown({ eras }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -34,23 +34,21 @@ export default function CategoriesDropdown({ categories }) {
         onMouseLeave={handleMouseLeave}
       >
         <Link
-          href={"/categories"}
+          href={"/eras"}
           className="nav-link cursor-pointer hover:bg-[var(--tertiary-coral-orange)]"
         >
-          Categories
+          Eras
         </Link>
         {isDropdownOpen && (
           <div className="absolute top-full left-[-100%] min-w-max bg-white shadow-lg">
             <ul>
-              {categories.map((category) => (
-                <li key={category.id}>
+              {eras.map((era) => (
+                <li key={era.id}>
                   <Link
-                    href={`/category/${category.id}/${slugify(
-                      category.category_name
-                    )}`}
+                    href={`/eras/${era.id}/${slugify(era.era_name)}`}
                     className="block py-2 px-4 hover:bg-[var(--tertiary-coral-orange)]"
                   >
-                    {category.category_name}
+                    {era.era_name}
                   </Link>
                 </li>
               ))}

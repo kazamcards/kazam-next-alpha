@@ -5,10 +5,14 @@ import Link from "next/link";
 // Imports to query the database:
 import { allCategories } from "@/app/lib/AllCategories";
 import CategoriesDropdown from "./CategoriesDropdown";
+import ErasDropdown from "./ErasDropdown";
+import { allEras } from "@/app/lib/AllEras";
 
 export default async function Header() {
   const categories = await allCategories();
   console.log(categories);
+  const eras = await allEras();
+  console.log(eras);
 
   return (
     <>
@@ -35,6 +39,7 @@ export default async function Header() {
           Categories
         </Link> */}
         <CategoriesDropdown categories={categories} />
+        <ErasDropdown eras={eras} />
         <Link className="nav-link" href="/about">
           About
         </Link>

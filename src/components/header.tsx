@@ -7,11 +7,13 @@ export default function Header() {
     <>
       <header className=" items-center py-4 px-8">
         <div>
-          <Image
-            src={KazamLogo}
-            alt="Picture of Logo"
-            className="h-[5rem] w-auto"
-          />
+          <a href="/">
+            <Image
+              src={KazamLogo}
+              alt="Picture of Logo"
+              className="h-[5rem] w-auto"
+            />
+          </a>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold">Kazam Cards</h1>

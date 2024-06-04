@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 interface Product {
-  productName: string;
+  product_name: string;
   price: number;
   category: string;
   era: string;
   set: string;
-  stockVolume: number;
+  inventory: number;
 }
 
 const AdminPage: React.FC = () => {
   const [product, setProduct] = useState<Product>({
-    productName: '',
+    product_name: "",
     price: 0,
-    category: '',
-    era: '',
-    set: '',
-    stockVolume: 0,
+    category: "",
+    era: "",
+    set: "",
+    inventory: 0
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,7 +27,7 @@ const AdminPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Product submitted:', product);
+    console.log("Product submitted:", product);
     // Here you can handle the form submission, e.g., send the data to a server
   };
 
@@ -35,12 +36,12 @@ const AdminPage: React.FC = () => {
       <h1>Admin Page - Upload Product</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="productName">Product Name:</label>
+          <label htmlFor="product_name">Product Name:</label>
           <input
             type="text"
-            id="productName"
-            name="productName"
-            value={product.productName}
+            id="product_name"
+            name="product_name"
+            value={product.product_name}
             onChange={handleChange}
             required
           />
@@ -90,12 +91,12 @@ const AdminPage: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="stockVolume">Stock Volume:</label>
+          <label htmlFor="inventory">Stock Volume:</label>
           <input
             type="number"
-            id="stockVolume"
-            name="stockVolume"
-            value={product.stockVolume}
+            id="inventory"
+            name="inventory"
+            value={product.inventory}
             onChange={handleChange}
             required
           />

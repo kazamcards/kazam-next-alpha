@@ -1,7 +1,6 @@
 import Image from "next/image";
 import KazamLogo from "../../public/images/Kazam_Cards_edited.png";
 import Link from "next/link";
-import { SignIn } from "./sign-in";
 
 export default function Header() {
   return (
@@ -31,7 +30,6 @@ export default function Header() {
         <Link className="nav-link" href="/about">
           About
         </Link>
-        <SignIn />
       </nav>
     </>
   );

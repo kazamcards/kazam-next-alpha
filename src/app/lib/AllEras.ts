@@ -1,11 +1,11 @@
 import { db } from "./db";
-import { Product } from "../../components/types";
 
-export const queryEras = `
+// Get all of the Eras and their names:
+export async function allEras() {
+  const queryEras = `
     SELECT * FROM era
     `;
 
-export async function allEras() {
   const response = await db.query(`${queryEras}`);
   return response.rows;
 }

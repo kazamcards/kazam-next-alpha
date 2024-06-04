@@ -11,9 +11,7 @@ import ErasDropdown from "./ErasDropdown";
 
 export default async function Header() {
   const categories = await allCategories();
-  console.log(categories);
   const eras = await allEras();
-  console.log(eras);
 
   return (
     <>

@@ -1,0 +1,27 @@
+// --- --- Product Page --- ---
+// --- Component Imports:
+import ProductDisplay from "@/components/ProductDisplay";
+import Footer from "@/components/footer";
+import { db } from "../../lib/db";
+import { Product } from "../../../components/types";
+import { individualProduct } from "@/app/lib/IndividualProduct";
+
+export default function ProductPage({ params }) {
+  console.log(params.id);
+
+  return (
+    <>
+      <main>
+        <div className="individual-product border border-black  h-auto">
+          {/* <h1>{Product.product_name}</h1> */}
+          <div className="individual-product-container flex flex-row gap-2 pl-2 pb-4">
+            <ProductDisplay
+              fetchProducts={async () => await individualProduct(params.id)}
+            />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}

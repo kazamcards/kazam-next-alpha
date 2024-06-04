@@ -1,8 +1,18 @@
+// Imports for the brand logo:
 import Image from "next/image";
 import KazamLogo from "../../public/images/Kazam_Cards_edited.png";
 import Link from "next/link";
+// Imports to query the database:
+import { allCategories } from "@/app/lib/AllCategories";
+import { allEras } from "@/app/lib/AllEras";
+// Imports for Components:
+import CategoriesDropdown from "./CategoriesDropdown";
+import ErasDropdown from "./ErasDropdown";
 
-export default function Header() {
+export default async function Header() {
+  const categories = await allCategories();
+  const eras = await allEras();
+
   return (
     <>
       <header className="items-center py-4 px-8">
@@ -24,9 +34,8 @@ export default function Header() {
         <Link className="nav-link" href="/">
           Homey Home Page
         </Link>
-        <Link className="nav-link" href="/categories">
-          Categories
-        </Link>
+        <CategoriesDropdown categories={categories} />
+        <ErasDropdown eras={eras} />
         <Link className="nav-link" href="/about">
           About
         </Link>

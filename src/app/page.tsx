@@ -2,6 +2,8 @@
 // --- Component Imports:
 import ProductDisplay from "@/components/ProductDisplay";
 import Footer from "@/components/footer";
+import Link from "next/link";
+import { Product } from "../components/types";
 
 // --- Database query modules:
 // This import specifically gets the database query string which finds the 10 most recently added products:

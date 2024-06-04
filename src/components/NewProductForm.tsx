@@ -1,4 +1,5 @@
 "use client";
+import { allCategories } from "@/app/lib/AllCategories";
 import React, { useState } from "react";
 
 interface Product {
@@ -10,14 +11,16 @@ interface Product {
   inventory: number;
 }
 
-const AdminPage: React.FC = () => {
+export default function NewProductForm({ categories, era, set }) {
+  console.log(categories);
+
   const [product, setProduct] = useState<Product>({
     product_name: "",
     price: 0,
     category: "",
     era: "",
     set: "",
-    inventory: 0
+    inventory: 0,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,35 +62,79 @@ const AdminPage: React.FC = () => {
         </div>
         <div>
           <label htmlFor="category">Category:</label>
-          <input
-            type="text"
+          <select
+            type="select"
             id="category"
             name="category"
-            value={product.category}
+            defaultValue=""
             onChange={handleChange}
             required
-          />
+          >
+            <option disabled value="">
+              Choose the best suited...
+            </option>
+            {categories.map((cat) => {
+              return (
+                <option
+                  key={cat.id}
+                  value={parseInt(cat.id)}
+                  name={cat.category_name}
+                >
+                  {cat.category_name}
+                </option>
+              );
+            })}
+          </select>
         </div>
         <div>
           <label htmlFor="era">Era:</label>
-          <input
-            type="text"
+          <select
+            type="select"
             id="era"
             name="era"
-            value={product.era}
+            defaultValue=""
+            
             onChange={handleChange}
-            required
-          />
+            required>
+            <option disabled value="">
+            Choose the best suited...
+          </option>
+          {era.map((era) => {
+              return (
+                <option
+                  key={era.id}
+                  value={parseInt(era.id)}
+                  name={era.era_name}
+                >
+                  {era.era_name}
+                </option>
+              )})}
+              </select>
         </div>
         <div>
           <label htmlFor="set">Set:</label>
-          <input
-            type="text"
+          <select
+            type="select"
             id="set"
             name="set"
-            value={product.set}
+            defaultValue=""
+            
             onChange={handleChange}
-            required
+            required>
+            <option disabled value="">
+            Choose the best suited...
+          </option>
+          {set.map((set) => {
+              return (
+                <option
+                  key={set.id}
+                  value={parseInt(set.id)}
+                  name={set.set_name}
+                >
+                  {set.set_name}
+                </option>
+              )})}
+              </select>
           />
         </div>
         <div>
@@ -105,6 +152,4 @@ const AdminPage: React.FC = () => {
       </form>
     </div>
   );
-};
-
-export default AdminPage;
+}

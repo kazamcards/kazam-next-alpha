@@ -14,18 +14,18 @@ export default function Home() {
   return (
     <>
       <main>
+        <h2 className="text-center"> Recently Added</h2>
         <div className="recently-added border border-black  h-auto overflow-scroll">
-          <h1> Recently Added</h1>
           <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
             <ProductDisplay fetchProducts={recentlyAdded} />
           </div>
         </div>
+        <h2 className="text-center"> Top Sellers </h2>
         <div className="top-sellers border border-black h-96 overflow-scroll">
-          <h1> Top Sellers </h1>
-          <h1>
+          <h3>
             This is currently showing all products only from Sword and Shield
             era
-          </h1>
+          </h3>
           <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
             <ProductDisplay fetchProducts={async () => await queryEra(2)} />
           </div>

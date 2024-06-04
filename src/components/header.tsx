@@ -32,15 +32,11 @@ export default async function Header() {
         </div>
         <div id="kazamLogo">
           <Link href="/">
-            <Image
-              src={KazamLogo}
-              alt="Picture of Logo"
-              className="h-[5rem] w-auto"
-            />
+            <Image src={KazamLogo} alt="Picture of Logo" className=" w-auto" />
           </Link>
         </div>
-        <div className="flex flex-col items-center">
-          <h1 className="text-xl font-bold">Kazam Cards</h1>
+        <div className="flex flex-col items-center" id="description">
+          <h1 className="text-base font-bold">Kazam Cards</h1>
           <p className="text-sm">Your one stop PKMN shop</p>
         </div>
       </header>

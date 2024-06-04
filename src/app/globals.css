@@ -36,7 +36,7 @@ nav {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   padding: 1rem;
   background-color: #f8f9fa;
@@ -46,7 +46,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #007bff;
+  background-color: #f7e219;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -76,6 +76,10 @@ footer {
   padding: 1rem;
 }
 
+.nav-link:hover {
+  background-color: var(--tertiary-coral-orange);
+}
+
 @media (min-width: 768px) {
   body {
     padding: 2rem;
@@ -97,6 +101,7 @@ footer {
     footer {
       padding: 2rem;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -122,3 +127,6 @@ footer {
       cursor: pointer;
     }
   }}
+
+  }
+}

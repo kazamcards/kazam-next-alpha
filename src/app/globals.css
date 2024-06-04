@@ -12,6 +12,13 @@
   --tertiary-coral-orange: #fc7753;
 }
 
+#topButtons {
+  height: 1vh;
+  display: flex;
+  justify-content: space-between;
+  max-height: 4.5rem;
+}
+
 header {
   background-color: var(--main-canary-yellow);
   border-bottom: 2px solid var(--main-electric-purple);
@@ -42,11 +49,11 @@ body {
   background-color: #f8f9fa;
 }
 
-header {
+#kazamLogo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f7e219;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffea00;
   color: #fff;
   padding: 1rem;
   text-align: center;

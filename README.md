@@ -12,3 +12,7 @@ Bugs:
 1.  Problem: Footer appears twice.
     Cause: Footer was in both the layout.tsx but also manually included on the homepage.
     Status: Resolved.
+
+2.  Problem: Deployments failing.
+    Cause: Errors in TypeScript - params in the indivdual product page was being flagged for its type not being declared.
+    Status: Testing.

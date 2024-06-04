@@ -15,8 +15,8 @@ export default async function CategoryDynamicPage({ params }) {
     <>
       <h1>Welcome to the Categories dynamic page</h1>
       <h2>
-        Youre on {thisCategory.category_name}. Heres the products from that
-        category:
+        You&apos;re on {thisCategory.category_name}. Here are the products from
+        that category:
       </h2>
       <ProductDisplay fetchProducts={async () => await queryCategory(catId)} />
     </>

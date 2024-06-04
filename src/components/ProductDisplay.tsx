@@ -22,7 +22,8 @@ export default async function ProductDisplay(props: {
       {productData.map((product) => {
         return (
           <div
-            className="product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300"
+            className="product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300 
+            object-position: center;"
             key={product.id}
           >
             <a href={`/product/${encodeURIComponent(product.id)}`}>

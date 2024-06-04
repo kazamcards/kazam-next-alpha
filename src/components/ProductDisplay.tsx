@@ -25,7 +25,9 @@ export default async function ProductDisplay(props: {
             className="product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300"
             key={product.id}
           >
-            <Image src={TestPack} alt={"test image"} height={150} />
+            <a href={`/product/${encodeURIComponent(product.id)}`}>
+              <Image src={TestPack} alt={"test image"} height={150} />
+            </a>
             <div className="product-text flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1">
               {" "}
               <p>{product.era}</p>

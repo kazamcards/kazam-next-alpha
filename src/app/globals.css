@@ -12,6 +12,10 @@
   --tertiary-coral-orange: #fc7753;
 }
 
+#description {
+  visibility: hidden;
+}
+
 #topButtons {
   height: 1vh;
   display: flex;
@@ -45,11 +49,11 @@ nav {
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  padding: 1rem;
   background-color: #f8f9fa;
 }
 
 #kazamLogo {
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -88,18 +92,31 @@ footer {
 }
 
 @media (min-width: 768px) {
-  body {
-    padding: 2rem;
-  }
-
   header {
+    height: 15vh;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
   }
 
+  header img {
+    height: 5rem;
+  }
+
   nav {
+    height: 10vh;
     justify-content: flex-end;
+  }
+
+  #topButtons {
+    height: 1vh;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+  }
+
+  #description {
+    visibility: visible;
   }
 
   nav a {

@@ -1,8 +1,9 @@
 import { db } from "./db";
 import { Product } from "../../components/types";
 
-// Get recently added products limited by last 10
-export const queryRecent = `
+// Get recently added products limited by last 10:
+export async function recentlyAdded(): Promise<Product[]> {
+  const queryRecent = `
     SELECT
     products.id, products.product_name, products.inventory, products.price, products.description, products.image_url,
     productscategory.category_name AS category,
@@ -14,8 +15,6 @@ export const queryRecent = `
   ORDER BY products.id DESC
   LIMIT 10
     `;
-
-export async function recentlyAdded(): Promise<Product[]> {
   const response = await db.query(`${queryRecent}`);
   return response.rows;
 }

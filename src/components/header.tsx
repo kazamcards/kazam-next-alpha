@@ -15,6 +15,7 @@ import SignOut from "./SignOut";
 import SignedIn from "./SignedIn";
 import SignedOut from "./SignedOut";
 import AdminSignedIn from "./AdminSignedIn";
+import NotAdmin from "./NotAdmin";
 
 export default async function Header() {
   const categories = await allCategories();

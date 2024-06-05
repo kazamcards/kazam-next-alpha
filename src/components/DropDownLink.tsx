@@ -6,6 +6,12 @@ export default function DropDownLink({ dropdowns, typeKey, nameKey }) {
   return (
     <div className="absolute top-full left-[-50%] min-w-max bg-[var(--tertiary-madder-red)] shadow-lg rounded-xl">
       <ul>
+        <Link
+          href={`/${typeKey}`}
+          className="block py-2 px-4 hover:bg-[var(--tertiary-coral-orange)] capitalize"
+        >
+          All {`${typeKey}`}
+        </Link>
         {dropdowns.map((drop) => (
           <li key={drop.id}>
             <Link

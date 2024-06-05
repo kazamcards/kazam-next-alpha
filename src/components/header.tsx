@@ -40,7 +40,7 @@ export default async function Header() {
           <p className="text-sm">Your one stop PKMN shop</p>
         </div>
       </header>
-      <nav className="flex justify-evenly">
+      <nav className="flex justify-evenly sticky top-0">
         <Link className="nav-link" href="/">
           Home
         </Link>

@@ -1,30 +1,72 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DropDownLink from "./DropDownLink";
+import { EraType } from "./types";
 
-export default function ErasDropdown({ eras }) {
+export default function ErasDropdown({ eras }: { eras: EraType[] }) {
   // Handles drop down menu being visible
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
+    if (!isMobile) {
+      setIsDropdownOpen(true);
+    }
   };
 
   const handleMouseLeave = () => {
+    if (!isMobile) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  const handleClick = (e: any) => {
+    if (isMobile) {
+      e.preventDefault(); // Prevent default navigation on click for mobile
+      setIsDropdownOpen(!isDropdownOpen);
+    }
+  };
+
+  const handleClickOutside = () => {
     setIsDropdownOpen(false);
   };
+
+  useEffect(() => {
+    if (isMobile && isDropdownOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobile, isDropdownOpen]);
 
   return (
     <>
       {/* Dropdown */}
       <div
-        className="relative place-content-center"
+        className="relative"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Link href={"/eras"} className="nav-link cursor-pointer">
+        <Link
+          href={"/eras"}
+          className="nav-link cursor-pointer"
+          onClick={handleClick}
+        >
           Eras
         </Link>
 

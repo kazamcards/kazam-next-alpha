@@ -22,12 +22,16 @@ export default async function ProductDisplay(props: {
       {productData.map((product) => {
         return (
           <div
-            className="product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300 
-            object-position: center;"
+            className="product-card flex flex-col items-center border pt-1 rounded-xl bg-[--tertiary-mint-green] shadow-xl"
             key={product.id}
           >
             <a href={`/product/${encodeURIComponent(product.id)}`}>
-              <Image src={TestPack} alt={"test image"} height={150} />
+              <Image
+                src={TestPack}
+                alt={"test image"}
+                height={150}
+                className="rounded shadow-2xl"
+              />
             </a>
             <div className="product-text flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1">
               {" "}

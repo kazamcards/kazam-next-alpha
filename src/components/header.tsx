@@ -20,6 +20,7 @@ import NotAdmin from "./NotAdmin";
 export default async function Header() {
   const categories = await allCategories();
   const eras = await allEras();
+  console.log(categories);
   const supabase = createClient();
   const { data, error } = await supabase.auth.getUser();
 
@@ -71,7 +72,7 @@ export default async function Header() {
           <p className="text-sm">Your one stop PKMN shop</p>
         </div>
       </header>
-      <nav className="flex justify-evenly">
+      <nav className="main-nav-bar flex justify-evenly sticky top-0">
         <Link className="nav-link" href="/">
           Home
         </Link>

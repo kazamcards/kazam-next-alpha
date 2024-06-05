@@ -1,7 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import { adminEmails } from "@/adminEmails";
 
-const AdminSignedIn = async ({
+const NotAdmin = async ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -11,10 +11,10 @@ const AdminSignedIn = async ({
   const { data, error } = await supabase.auth.getUser();
 
   const userEmail = data.user?.email;
-  if (typeof userEmail === "string" && adminEmails.includes(userEmail)) {
+  if (typeof userEmail === "string" && !adminEmails.includes(userEmail)) {
     return <>{children}</>;
   }
   return null;
 };
 
-export default AdminSignedIn;
+export default NotAdmin;

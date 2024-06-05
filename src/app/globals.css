@@ -1,76 +1,154 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+:root {
+  --main-electric-purple: #c800ff;
+  --main-canary-yellow: #ffea00;
+  --secondary-uranian-blue: #a9def9;
+  --secondary-mauve-purple: #e4c1f9;
+  --tertiary-madder-red: #a31621;
+  --tertiary-mint-green: #71b48d;
+  --tertiary-coral-orange: #fc7753;
+}
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+#description {
+  visibility: hidden;
+}
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+#topButtons {
+  height: 1vh;
+  display: flex;
+  justify-content: space-between;
+  max-height: 4.5rem;
+}
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+header {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+nav {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+.product-card {
+  min-width: 15rem;
+}
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+/* globals.css */
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
 
-      --radius: 0.5rem;
-    }
+#kazamLogo {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffea00;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
 
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
+header img {
+  height: 5rem;
+  width: auto;
+}
 
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #007bff;
+  padding: 1rem;
+}
 
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
 
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
+footer {
+  background-color: #f7e219;
+  text-align: center;
+  padding: 1rem;
+}
 
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
+.nav-link:hover {
+  background-color: var(--tertiary-coral-orange);
+}
 
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+@media (min-width: 768px) {
+  header {
+    height: 15vh;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
+  header img {
+    height: 5rem;
+  }
+
+  nav {
+    height: 10vh;
+    justify-content: flex-end;
+  }
+
+  #topButtons {
+    height: 1vh;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+  }
+
+  #description {
+    visibility: visible;
+  }
+
+  nav a {
+    margin-left: 1rem;
+
+    footer {
+      padding: 2rem;
     }
-    body {
-      @apply bg-background text-foreground;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
     }
   }
+}

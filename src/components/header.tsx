@@ -10,21 +10,52 @@ import { allEras } from "@/app/lib/AllEras";
 // Imports for Components:
 import CategoriesDropdown from "./CategoriesDropdown";
 import ErasDropdown from "./ErasDropdown";
+import { createClient } from "@/utils/supabase/server";
+import SignOut from "./SignOut";
+import SignedIn from "./SignedIn";
+import SignedOut from "./SignedOut";
+import AdminSignedIn from "./AdminSignedIn";
+import NotAdmin from "./NotAdmin";
 
 export default async function Header() {
   const categories = await allCategories();
   const eras = await allEras();
   console.log(categories);
+  const supabase = createClient();
+  const { data, error } = await supabase.auth.getUser();
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+  }
 
   return (
     <>
       <header>
         <div id="topButtons">
-          <Image
-            src={AccountButton}
-            alt="Icon representing user account"
-            className="h-[2.5rem] w-auto left-0 padding-0"
-          />
+          <SignedOut>
+            <Link href="/login">
+              <Image
+                src={AccountButton}
+                alt="Icon representing user account"
+                className="h-[2.5rem] w-auto left-0 padding-0"
+              />
+              <span>Login</span>
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <div>
+              <Image
+                src={AccountButton}
+                alt="Icon representing user account"
+                className="h-[2.5rem] w-auto left-0 padding-0"
+              />
+              <span>Welcome {data.user?.email}</span>
+              <SignOut />
+            </div>
+          </SignedIn>
+          <AdminSignedIn>
+            <Link href="/admin">Admin Console</Link>
+          </AdminSignedIn>
           <Image
             src={BasketButton}
             alt="Icon representing user basket"

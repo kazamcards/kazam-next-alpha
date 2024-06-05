@@ -28,13 +28,14 @@ header {
   border-bottom: 2px solid var(--main-electric-purple);
 }
 
-nav {
-  background-color: var(--main-canary-yellow);
-  border-bottom: 2px solid var(--main-electric-purple);
-}
-
 .product-card {
   min-width: 15rem;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: scale(1.025);
 }
 
 /* globals.css */
@@ -68,16 +69,9 @@ header img {
   width: auto;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #007bff;
-  padding: 1rem;
-}
-
 nav a {
   color: white;
+  text-shadow: 1px 1px 3px black;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -88,8 +82,54 @@ footer {
   padding: 1rem;
 }
 
+.nav-link {
+  position: relative;
+
+  border-radius: 0.5rem;
+}
 .nav-link:hover {
-  background-color: var(--tertiary-coral-orange);
+  transition: all 250ms ease-in;
+  background-color: var(--main-electric-purple);
+}
+.nav-link:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: (var(--tertiary-madder-red));
+}
+
+.main-nav-bar {
+  min-height: 5vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: var(--secondary-mauve-purple);
+  border-bottom: 2px solid var(--main-electric-purple);
+}
+
+.dropdown-menu {
+  z-index: 1000;
+  width: max-content;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: all 2s linear;
+  animation: appear 250ms ease-in;
+}
+
+@keyframes appear {
+  from {
+    opacity: 10%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -105,8 +145,7 @@ footer {
   }
 
   nav {
-    height: 10vh;
-    justify-content: flex-end;
+    height: 5vh;
   }
 
   #topButtons {
@@ -120,36 +159,28 @@ footer {
     visibility: visible;
   }
 
-  nav a {
-    margin-left: 1rem;
+  footer {
+    padding: 2rem;
+  }
 
-    footer {
-      padding: 2rem;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  label {
+    margin-right: 10px;
+  }
 
-    div {
-      margin-bottom: 10px;
-    }
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
 
-    label {
-      margin-right: 10px;
-    }
-
-    input {
-      padding: 5px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
 }

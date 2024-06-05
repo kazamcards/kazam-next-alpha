@@ -2,9 +2,17 @@
 import { slugify } from "@/app/lib/slugify";
 import Link from "next/link";
 
-export default function DropDownLink({ dropdowns, typeKey, nameKey }) {
+export default function DropDownLink({
+  dropdowns,
+  typeKey,
+  nameKey
+}: {
+  dropdowns: any;
+  typeKey: string;
+  nameKey: string;
+}) {
   return (
-    <div className="absolute top-full left-[-50%] min-w-max bg-[var(--tertiary-madder-red)] shadow-lg rounded-xl">
+    <div className="dropdown-menu absolute bg-[var(--tertiary-madder-red)] shadow-lg rounded-xl">
       <ul>
         <Link
           href={`/${typeKey}`}
@@ -12,11 +20,11 @@ export default function DropDownLink({ dropdowns, typeKey, nameKey }) {
         >
           All {`${typeKey}`}
         </Link>
-        {dropdowns.map((drop) => (
+        {dropdowns.map((drop: any) => (
           <li key={drop.id}>
             <Link
               href={`/${typeKey}/${drop.id}/${slugify(drop[nameKey])}`}
-              className="block py-2 px-4 hover:bg-[var(--tertiary-coral-orange)]"
+              className="block py-2 px-4 hover:bg-[var(--tertiary-coral-orange)] "
             >
               {drop[nameKey]}
             </Link>

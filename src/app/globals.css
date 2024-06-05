@@ -37,6 +37,14 @@ nav {
   min-width: 15rem;
 }
 
+.individual-product-card {
+  min-width: 25rem;
+}
+
+.individual-product-card > img {
+  min-width: 15rem;
+}
+
 /* globals.css */
 
 /* Basic reset */
@@ -115,8 +123,12 @@ footer {
     top: 0;
   }
 
-  #description {
-    visibility: visible;
+  .individual-product-card {
+    min-width: 15rem;
+  }
+
+  .description {
+    position: relative;
   }
 
   nav a {

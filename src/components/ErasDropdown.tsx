@@ -2,8 +2,9 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import DropDownLink from "./DropDownLink";
+import { EraType } from "./types";
 
-export default function ErasDropdown({ eras }) {
+export default function ErasDropdown({ eras }: { eras: EraType[] }) {
   // Handles drop down menu being visible
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -30,14 +31,14 @@ export default function ErasDropdown({ eras }) {
     }
   };
 
-  const handleClick = (e) => {
+  const handleClick = (e: any) => {
     if (isMobile) {
       e.preventDefault(); // Prevent default navigation on click for mobile
       setIsDropdownOpen(!isDropdownOpen);
     }
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = () => {
     setIsDropdownOpen(false);
   };
 

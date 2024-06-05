@@ -2,8 +2,13 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import DropDownLink from "./DropDownLink";
+import { CategoryType } from "./types";
 
-export default function CategoriesDropdown({ categories }) {
+export default function CategoriesDropdown({
+  categories
+}: {
+  categories: CategoryType[];
+}) {
   // Handles drop down menu being visible
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -30,14 +35,14 @@ export default function CategoriesDropdown({ categories }) {
     }
   };
 
-  const handleClick = (e) => {
+  const handleClick = (e: any) => {
     if (isMobile) {
       e.preventDefault(); // Prevent default navigation on click for mobile
       setIsDropdownOpen(!isDropdownOpen);
     }
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = (e: any) => {
     setIsDropdownOpen(false);
   };
 

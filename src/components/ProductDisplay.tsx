@@ -4,6 +4,7 @@ import TestPack from "../../public/images/test-pack.webp";
 import Image from "next/image";
 // Typing import:
 import { Product } from "./types";
+import Link from "next/link";
 
 // This component will change what it displays depending on the Props it receives.
 // The 'fetchProducts' prop is a function call to the database, which is passed in from whichever parent is calling this component:
@@ -22,39 +23,48 @@ export default async function ProductDisplay(props: {
       {productData.map((product) => {
         return (
           <div
-            className="product-card flex flex-col items-center  pt-1 rounded-xl bg-[#f6e61f] shadow-xl border-4 border-black"
+            className="product-card flex flex-col items-center justify-between pt-1 rounded-xl bg-[#f6e61f] shadow-xl border-4 border-black"
             key={product.id}
           >
-            <a href={`/product/${encodeURIComponent(product.id)}`}>
-              <Image
-                src={product.image_url}
-                alt={product.product_name}
-                height={150}
-                width={150}
-                className="rounded shadow-2xl"
-              />
-            </a>
-            <div className="product-text flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1">
-              {" "}
-              <p>{product.era}</p>
-              <p>{product.set}</p>
-              <p>{product.product_name}</p>
-            </div>
-
-            {product.inventory > 0 ? (
-              <p>{product.inventory} in stock</p>
-            ) : (
-              <p className="bg-red-700 text-white text-center w-full ">
-                {" "}
-                Sold out!{" "}
+            <Link
+              href={`/product/${product.id}`}
+              className="flex flex-col items-center justify-start"
+            >
+              <div className="p-2 h-[15rem] w-[15rem] relative">
+                <Image
+                  src={product.image_url}
+                  alt={product.product_name}
+                  fill={true}
+                  className="product-image rounded object-contain"
+                />
+              </div>
+              <p className="text-lg text-center h-12 m-2">
+                {product.product_name}
               </p>
-            )}
 
-            <p>£{product.price}</p>
+              <div className="product-text flex flex-col gap-2 justify-start items-center w-full border-t border-b h-24 mt-1 mb-1">
+                <p>Pokémon {product.era}</p>
+                <p className="text-center">
+                  {product.set} {product.category}
+                </p>
+              </div>
+
+              {product.inventory > 0 ? (
+                <p>{product.inventory} in stock</p>
+              ) : (
+                <p className="bg-red-700 text-white text-center w-full ">
+                  Sold out!
+                </p>
+              )}
+
+              <p>£{product.price}</p>
+            </Link>
+
             {product.inventory > 0 ? (
-              <p className="bg-[#cc05fb] text-center border-4 border-black rounded-2xl">
+
+              <button className="basket-button bg-[#cc05fb] text-center p-2 border-4 border-black rounded-2xl text-white">
                 ADD TO BASKET
-              </p>
+              </button>
             ) : null}
           </div>
         );

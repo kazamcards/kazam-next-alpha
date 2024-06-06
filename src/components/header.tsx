@@ -20,7 +20,6 @@ import NotAdmin from "./NotAdmin";
 export default async function Header() {
   const categories = await allCategories();
   const eras = await allEras();
-  console.log(categories);
   const supabase = createClient();
   const { data, error } = await supabase.auth.getUser();
   const displayName = data.user?.user_metadata.display_name;
@@ -28,8 +27,6 @@ export default async function Header() {
   async function signOut() {
     const { error } = await supabase.auth.signOut();
   }
-
-  console.log(data);
 
   return (
     <>
@@ -63,7 +60,7 @@ export default async function Header() {
             </Link>
           </SignedOut>
           <SignedIn>
-            <div className="flex items-end gap-2 border rounded p-1">
+            <div className="user-button flex items-end gap-2 border rounded p-1">
               <Image
                 src={AccountButton}
                 alt="Icon representing user account"
@@ -73,7 +70,7 @@ export default async function Header() {
             </div>
           </SignedIn>
 
-          <div className="flex items-end gap-2 border rounded p-1">
+          <div className="user-basket-button flex items-end gap-2 border rounded p-1">
             <Image
               src={BasketButton}
               alt="Icon representing user basket"

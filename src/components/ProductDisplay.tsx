@@ -31,9 +31,10 @@ export default async function ProductDisplay(props: {
               className="flex flex-col items-center justify-start"
             >
               <Image
-                src={TestPack}
+                src={product.image_url}
                 alt={"test image"}
-                height={150}
+                height={300}
+                width={150}
                 className="product-image rounded shadow-2xl"
               />
 

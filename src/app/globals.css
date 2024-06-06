@@ -10,10 +10,12 @@
   --tertiary-madder-red: #a31621;
   --tertiary-mint-green: #71b48d;
   --tertiary-coral-orange: #fc7753;
+  font-family: Roboto;
 }
 
-#description {
-  visibility: hidden;
+header {
+  background-color: var(--main-canary-yellow);
+  border-bottom: 2px solid var(--main-electric-purple);
 }
 
 .userHeaderContainer {
@@ -29,15 +31,12 @@
   border-radius: 0.5rem;
 }
 
-.adminConsoleButton:hover {
+.adminConsoleButton:hover,
+.user-button:hover,
+.user-basket-button:hover {
   box-shadow: 2px 2px 2px black;
   border: 1px solid var(--tertiary-coral-orange);
   color: var(--tertiary-madder-red);
-}
-
-header {
-  background-color: var(--main-canary-yellow);
-  border-bottom: 2px solid var(--main-electric-purple);
 }
 
 .product-card {
@@ -49,7 +48,6 @@ header {
 .product-card:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  /* transform: scale(1.025); */
   border: 3px solid var(--main-electric-purple);
   box-shadow: 2px 2px 2px black;
 }
@@ -121,6 +119,8 @@ footer {
 .main-nav-bar {
   min-height: 5vh;
 
+  position: sticky;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -140,6 +140,38 @@ footer {
   animation: appear 250ms ease-in;
 }
 
+.product-form {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  background-color: orange;
+}
+
+.product-form input,
+.product-form select,
+.product-form textarea {
+  width: 70%;
+  padding: 0.1rem;
+  padding-left: 0.2rem;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.product-form button {
+  align-self: center;
+  width: 10rem;
+  border: 2px solid var(--main-electric-purple);
+  padding: 0.25rem;
+  background-color: var(--secondary-mauve-purple);
+}
+
+.product-form button:hover {
+  border: 2px solid var(--secondary-mauve-purple);
+  background-color: var(--main-electric-purple);
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+
 @keyframes appear {
   from {
     opacity: 10%;
@@ -157,10 +189,6 @@ footer {
     padding: 0.25rem;
   }
 
-  nav {
-    height: 5vh;
-  }
-
   .userHeaderContainer {
     display: flex;
     flex-direction: column;
@@ -176,21 +204,6 @@ footer {
 
   footer {
     padding: 2rem;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  label {
-    margin-right: 10px;
-  }
-
-  input {
-    padding: 5px;
-    font-size: 16px;
   }
 
   button {

@@ -49,10 +49,7 @@ export default async function ProductDisplay(props: {
               <h2>Product Details</h2>
               <p>{product.era}</p>
               <p>{product.set}</p>
-              <p>
-                This is a placeholder for the product details until we work out
-                how we&apos;re handling that.
-              </p>
+              <p>{product.description}</p>
             </div>
           </div>
         );

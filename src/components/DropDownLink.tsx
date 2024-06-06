@@ -12,7 +12,7 @@ export default function DropDownLink({
   nameKey: string;
 }) {
   return (
-    <div className="dropdown-menu absolute bg-[var(--tertiary-madder-red)] shadow-lg rounded-xl">
+    <div className="dropdown-menu absolute bg-[var(--tertiary-madder-red)] shadow-lg rounded-xl z-50">
       <ul>
         <Link
           href={`/${typeKey}`}

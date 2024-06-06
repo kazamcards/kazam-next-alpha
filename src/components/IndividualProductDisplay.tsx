@@ -28,7 +28,12 @@ export default async function ProductDisplay(props: {
             <div>
               <h1>{product.product_name}</h1>
             </div>
-            <Image src={TestPack} alt={"test image"} height={150} />
+            <Image
+              src={product.image_url}
+              alt={"test image"}
+              height={150}
+              width={300}
+            />
 
             <p>£{product.price}</p>
             {product.inventory > 0 ? (
@@ -45,7 +50,7 @@ export default async function ProductDisplay(props: {
                 ADD TO BASKET BUTTON
               </p>
             ) : null}
-            <div className="description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1 nset-y-0 right-0">
+            <div className="description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1">
               <h2>Product Details</h2>
               <p>{product.era}</p>
               <p>{product.set}</p>

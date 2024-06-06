@@ -24,20 +24,20 @@ export default async function ProductDisplay(props: {
         return (
           <div
             className="product-card flex flex-col items-center justify-between pt-1 rounded-xl bg-[#f6e61f] shadow-xl border-4 border-black"
-
             key={product.id}
           >
             <Link
               href={`/product/${product.id}`}
               className="flex flex-col items-center justify-start"
             >
-              <Image
-                src={product.image_url}
-                alt={"test image"}
-                height={300}
-                width={150}
-                className="product-image rounded shadow-2xl"
-              />
+              <div className="p-2 h-[15rem] w-[15rem] relative">
+                <Image
+                  src={product.image_url}
+                  alt={product.product_name}
+                  fill={true}
+                  className="product-image rounded object-contain"
+                />
+              </div>
 
               <p className="text-lg text-center h-12 m-2">
                 {product.product_name}
@@ -65,7 +65,6 @@ export default async function ProductDisplay(props: {
               <button className="basket-button bg-[#cc05fb] text-center p-2 border-4 border-black rounded-2xl text-white">
                 ADD TO BASKET
               </button>
-
             ) : null}
           </div>
         );

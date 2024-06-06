@@ -85,8 +85,7 @@ body {
 }
 
 nav a {
-  color: white;
-  text-shadow: 1px 1px 3px black;
+  color: black;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -120,6 +119,7 @@ footer {
   min-height: 5vh;
 
   position: sticky;
+  z-index: 1000;
 
   display: flex;
   justify-content: space-evenly;
@@ -172,6 +172,12 @@ footer {
   box-shadow: 2px 2px 2px black;
 }
 
+.category-product-container {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
 @keyframes appear {
   from {
     opacity: 10%;
@@ -196,6 +202,10 @@ footer {
 
   .individual-product-card {
     min-width: 15rem;
+  }
+
+  .category-product-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   footer {

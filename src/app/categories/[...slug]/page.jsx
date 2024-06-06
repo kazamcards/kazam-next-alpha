@@ -1,6 +1,9 @@
 import { queryCategory } from "@/app/lib/CategoryProducts";
 import { db } from "@/app/lib/db";
 import ProductDisplay from "@/components/ProductDisplay";
+import Link from "next/link";
+
+import "../categories.css";
 
 export default async function CategoryDynamicPage({ params }) {
   console.log("id is ", params.slug[0]);
@@ -10,19 +13,17 @@ export default async function CategoryDynamicPage({ params }) {
   const response = await db.query(`
   SELECT * FROM productscategory WHERE id = ${catId}`);
   const thisCategory = response.rows[0];
-  console.log(thisCategory);
   return (
-    <>
-      <h1>Welcome to the Categories dynamic page</h1>
-      <h2>
-        You&apos;re on {thisCategory.category_name}. Here are the products from
-        that category:
-      </h2>
+    <div className="dynamic-category-container flex flex-col p-2 gap-2">
+      <Link href="/categories" className="back-to-all-link">
+        Back to All Categories
+      </Link>
+      <h2>Here are our {thisCategory.category_name} products.</h2>
       <div className="category-product-container p-2">
         <ProductDisplay
           fetchProducts={async () => await queryCategory(catId)}
         />
       </div>
-    </>
+    </div>
   );
 }

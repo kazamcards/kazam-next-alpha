@@ -18,6 +18,10 @@ header {
   border-bottom: 2px solid var(--main-electric-purple);
 }
 
+h1 {
+  font-size: x-large;
+}
+
 .userHeaderContainer {
   padding: 0.5rem;
 

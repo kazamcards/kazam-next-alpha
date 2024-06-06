@@ -22,37 +22,45 @@ export default async function ProductDisplay(props: {
       {productData.map((product) => {
         return (
           <div
-            className="individual-product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300"
+            className="individual-product-card flex flex-col items-center border pt-1 rounded-xl bg-yellow-300 max-w-2xl"
             key={product.id}
           >
             <div>
               <h1>{product.product_name}</h1>
             </div>
-            <Image src={TestPack} alt={"test image"} height={150} />
+            <Image
+              src={product.image_url}
+              alt={"test image"}
+              height={150}
+              width={300}
+            />
 
-            <p>£{product.price}</p>
+            <p className="font-bold">£{product.price}</p>
             {product.inventory > 0 ? (
-              <p>{product.inventory} in stock</p>
+              <p>
+                <span className="p-1 text-red-500 font-semibold">
+                  {product.inventory}
+                </span>{" "}
+                in stock
+              </p>
             ) : (
-              <p className="bg-red-500 text-white text-center w-full">
-                {" "}
-                Sold out!{" "}
+              <p className="bg-red-500  text-white text-center w-full">
+                Sold out!
               </p>
             )}
 
             {product.inventory > 0 ? (
-              <p className="bg-[var(--tertiary-coral-orange)]  text-center">
-                ADD TO BASKET BUTTON
-              </p>
+              <button className="basket-button bg-[#cc05fb] text-center p-2 border-4 border-black rounded-2xl text-white">
+                ADD TO BASKET
+              </button>
             ) : null}
-            <div className="description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1 nset-y-0 right-0">
-              <h2>Product Details</h2>
-              <p>{product.era}</p>
-              <p>{product.set}</p>
-              <p>
-                This is a placeholder for the product details until we work out
-                how we&apos;re handling that.
-              </p>
+            <div className="product-description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1 p-2">
+              <h2 className="text-2xl font-bold text-center">
+                Product Details
+              </h2>
+              <p>Era: {product.era}</p>
+              <p>Set: {product.set}</p>
+              <p className="mt-4">{product.description}</p>
             </div>
           </div>
         );

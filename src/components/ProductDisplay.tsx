@@ -38,7 +38,6 @@ export default async function ProductDisplay(props: {
                   className="product-image rounded object-contain"
                 />
               </div>
-
               <p className="text-lg text-center h-12 m-2">
                 {product.product_name}
               </p>
@@ -62,6 +61,7 @@ export default async function ProductDisplay(props: {
             </Link>
 
             {product.inventory > 0 ? (
+
               <button className="basket-button bg-[#cc05fb] text-center p-2 border-4 border-black rounded-2xl text-white">
                 ADD TO BASKET
               </button>

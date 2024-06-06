@@ -30,13 +30,13 @@ header {
 
 .product-card {
   min-width: 15rem;
+  box-sizing: border-box;
 }
 
 .product-card:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   transform: scale(1.025);
-
 }
 
 /* globals.css */
@@ -188,4 +188,9 @@ footer {
     font-size: 16px;
     cursor: pointer;
   }
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Adjust the gap between items as needed */
 }

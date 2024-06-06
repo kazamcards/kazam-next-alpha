@@ -27,9 +27,10 @@ export default async function ProductDisplay(props: {
           >
             <a href={`/product/${encodeURIComponent(product.id)}`}>
               <Image
-                src={TestPack}
-                alt={"test image"}
+                src={product.image_url}
+                alt={product.product_name}
                 height={150}
+                width={150}
                 className="rounded shadow-2xl"
               />
             </a>
@@ -52,7 +53,7 @@ export default async function ProductDisplay(props: {
             <p>£{product.price}</p>
             {product.inventory > 0 ? (
               <p className="bg-[#cc05fb] text-center border-4 border-black rounded-2xl">
-                 ADD TO BASKET  
+                ADD TO BASKET
               </p>
             ) : null}
           </div>

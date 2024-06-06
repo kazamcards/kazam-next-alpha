@@ -22,7 +22,7 @@ export default async function ProductDisplay(props: {
       {productData.map((product) => {
         return (
           <div
-            className="product-card flex flex-col items-center border pt-1 rounded-xl bg-[--tertiary-mint-green] shadow-xl"
+            className="product-card flex flex-col items-center  pt-1 rounded-xl bg-[#f6e61f] shadow-xl border-4 border-black"
             key={product.id}
           >
             <a href={`/product/${encodeURIComponent(product.id)}`}>
@@ -43,7 +43,7 @@ export default async function ProductDisplay(props: {
             {product.inventory > 0 ? (
               <p>{product.inventory} in stock</p>
             ) : (
-              <p className="bg-red-500 text-white text-center w-full">
+              <p className="bg-red-700 text-white text-center w-full ">
                 {" "}
                 Sold out!{" "}
               </p>
@@ -51,8 +51,8 @@ export default async function ProductDisplay(props: {
 
             <p>£{product.price}</p>
             {product.inventory > 0 ? (
-              <p className="bg-[var(--tertiary-coral-orange)]  text-center">
-                ADD TO BASKET BUTTON
+              <p className="bg-[#cc05fb] text-center border-4 border-black rounded-2xl">
+                 ADD TO BASKET  
               </p>
             ) : null}
           </div>

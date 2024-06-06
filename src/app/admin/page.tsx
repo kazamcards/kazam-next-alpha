@@ -15,10 +15,13 @@ export default async function Admin() {
   const categories = await allCategories();
   const eras = await allEras();
   const sets = await allSets();
-  console.log(sets);
   return (
     <>
       <AdminSignedIn>
+        <div className="flex flex-col items-center">
+          <h1 className="text-xl">Admin Page</h1>
+          <h2>Upload New Product</h2>
+        </div>
         <div className="App">
           <NewProductForm categories={categories} era={eras} set={sets} />
         </div>

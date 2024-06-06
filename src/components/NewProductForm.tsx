@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { CategoryType, EraType, SetType } from "./types";
+import { UploadNewProduct } from "@/app/lib/UploadNewProduct";
 
 interface Product {
   product_name: string;
+  description: string;
   price: number;
   category: string;
   era: string;
   set: string;
+  imageUrl: string;
   inventory: number;
 }
 // @ts-ignore
@@ -21,12 +24,20 @@ export default function NewProductForm({
   era: EraType[];
   set: SetType[];
 }) {
+  const [formStatus, setFormStatus] = useState<{ pending: boolean }>({
+    pending: false
+  });
+
+  const formRef = useRef(null);
+
   const [product, setProduct] = useState<Product>({
     product_name: "",
+    description: "",
     price: 0,
     category: "",
     era: "",
     set: "",
+    imageUrl: "",
     inventory: 0
   });
 
@@ -37,17 +48,32 @@ export default function NewProductForm({
     setProduct({ ...product, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Product submitted:", product);
-    // Here we can handle the form submission to send to the database
+    setFormStatus({ pending: true });
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      await UploadNewProduct(formData);
+      setTimeout(() => {
+        setFormStatus({ pending: false });
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setFormStatus({ pending: false });
+      formRef.current.reset();
+    }
   };
 
   return (
     <div>
-      <h1>Admin Page - Upload Product</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form
+        ref={formRef}
+        className="product-form flex flex-col"
+        onSubmit={handleSubmit}
+      >
+        <div className="flex justify-between">
           <label htmlFor="product_name">Product Name:</label>
           <input
             type="text"
@@ -58,7 +84,18 @@ export default function NewProductForm({
             required
           />
         </div>
-        <div>
+        <div className="flex justify-between">
+          <label htmlFor="product_name">Description:</label>
+          <textarea
+            rows={4}
+            id="description"
+            name="description"
+            value={product.description}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="flex justify-between">
           <label htmlFor="price">Price:</label>
           <input
             type="number"
@@ -69,7 +106,7 @@ export default function NewProductForm({
             required
           />
         </div>
-        <div>
+        <div className="flex justify-between">
           <label htmlFor="category">Category:</label>
           <select
             type="select"
@@ -91,7 +128,7 @@ export default function NewProductForm({
             })}
           </select>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label htmlFor="era">Era:</label>
           <select
             type="select"
@@ -113,7 +150,7 @@ export default function NewProductForm({
             })}
           </select>
         </div>
-        <div>
+        <div className="flex justify-between">
           <label htmlFor="set">Set:</label>
           <select
             type="select"
@@ -135,7 +172,18 @@ export default function NewProductForm({
             })}
           </select>
         </div>
-        <div>
+        <div className="flex justify-between">
+          <label htmlFor="product_name">Image URL:</label>
+          <input
+            type="text"
+            id="imageUrl"
+            name="imageUrl"
+            value={product.imageUrl}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="flex justify-between">
           <label htmlFor="inventory">Stock Volume:</label>
           <input
             type="number"
@@ -146,7 +194,15 @@ export default function NewProductForm({
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <button
+          disabled={formStatus.pending}
+          type="submit"
+          className={`${
+            formStatus.pending ? "hover:bg-slate-500 cursor-not-allowed" : ""
+          }`}
+        >
+          {formStatus.pending ? "Sending..." : "Submit"}
+        </button>
       </form>
     </div>
   );

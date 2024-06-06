@@ -28,7 +28,12 @@ export default async function ProductDisplay(props: {
             <div>
               <h1>{product.product_name}</h1>
             </div>
-            <Image src={TestPack} alt={"test image"} height={150} />
+            <Image
+              src={product.image_url}
+              alt={"test image"}
+              height={150}
+              width={300}
+            />
 
             <p>£{product.price}</p>
             {product.inventory > 0 ? (

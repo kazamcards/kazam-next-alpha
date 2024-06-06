@@ -48,6 +48,7 @@ header {
 .product-card:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
+
   border: 3px solid var(--main-electric-purple);
   box-shadow: 2px 2px 2px black;
 }
@@ -61,6 +62,7 @@ header {
   border: 4px solid var(--main-electric-purple);
   color: black;
   box-shadow: 2px 2px 2px black;
+
 }
 
 /* globals.css */
@@ -217,4 +219,9 @@ footer {
     font-size: 16px;
     cursor: pointer;
   }
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Adjust the gap between items as needed */
 }

@@ -18,7 +18,11 @@ export default async function CategoryDynamicPage({ params }) {
         You&apos;re on {thisCategory.category_name}. Here are the products from
         that category:
       </h2>
-      <ProductDisplay fetchProducts={async () => await queryCategory(catId)} />
+      <div className="category-grid">
+        <ProductDisplay
+          fetchProducts={async () => await queryCategory(catId)}
+        />
+      </div>
     </>
   );
 }

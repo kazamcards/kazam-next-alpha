@@ -36,6 +36,7 @@ export default async function Header() {
         </Link>
 
         <div className="header-welcome flex flex-col gap-2 items-center border bg-[var(--secondary-uranian-blue)] p-2 shadow rounded-xl">
+          <SignedOut>Welcome!</SignedOut>
           <SignedIn>
             <span>Welcome {data.user?.email}</span>
           </SignedIn>

@@ -15,6 +15,7 @@ export default function Home() {
     <>
       <main className="bg-gray-100 min-h-screen p-4">
         <h2 className="text-center text-2xl font-bold mb-4">Recently Added</h2>
+        
         <div className="recently-added border-4 border-black h-auto overflow-scroll p-4 bg-[--secondary-uranian-blue]">
           <div className="recently-added-container flex flex-row gap-4 ">
             <ProductDisplay fetchProducts={recentlyAdded} />
@@ -27,11 +28,13 @@ export default function Home() {
           This is currently showing all products only from Sword and Shield era
         </h3>
         <div className="top-sellers border-4 border-black overflow-scroll p-4  bg-[--secondary-uranian-blue]">
+
           <div className="recently-added-container flex flex-row gap-4">
             <ProductDisplay fetchProducts={async () => await queryEra(2)} />
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

@@ -24,6 +24,7 @@ export default async function ProductDisplay(props: {
         return (
           <div
             className="product-card flex flex-col items-center justify-between pt-1 rounded-xl bg-[#f6e61f] shadow-xl border-4 border-black"
+
             key={product.id}
           >
             <Link
@@ -63,6 +64,7 @@ export default async function ProductDisplay(props: {
               <button className="basket-button bg-[#cc05fb] text-center p-2 border-4 border-black rounded-2xl text-white">
                 ADD TO BASKET
               </button>
+
             ) : null}
           </div>
         );

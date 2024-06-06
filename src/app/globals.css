@@ -10,17 +10,7 @@
   --tertiary-madder-red: #a31621;
   --tertiary-mint-green: #71b48d;
   --tertiary-coral-orange: #fc7753;
-}
-
-#description {
-  visibility: hidden;
-}
-
-#topButtons {
-  height: 1vh;
-  display: flex;
-  justify-content: space-between;
-  max-height: 4.5rem;
+  font-family: Roboto;
 }
 
 header {
@@ -28,15 +18,51 @@ header {
   border-bottom: 2px solid var(--main-electric-purple);
 }
 
+.userHeaderContainer {
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+
+  background-color: var(--secondary-mauve-purple);
+}
+
+.adminConsoleButton {
+  background-color: var(--secondary-mauve-purple);
+  border-radius: 0.5rem;
+}
+
+.adminConsoleButton:hover,
+.user-button:hover,
+.user-basket-button:hover {
+  box-shadow: 2px 2px 2px black;
+  border: 1px solid var(--tertiary-coral-orange);
+  color: var(--tertiary-madder-red);
+}
+
 .product-card {
-  min-width: 15rem;
-  box-sizing: border-box;
+  min-width: 18rem;
+  padding: 0.5rem;
+  border: 3px solid black;
 }
 
 .product-card:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  transform: scale(1.025);
+
+  border: 3px solid var(--main-electric-purple);
+  box-shadow: 2px 2px 2px black;
+}
+
+.product-image:hover {
+  box-shadow: 2px 2px 2px black;
+}
+
+.basket-button:hover {
+  background-color: var(--secondary-mauve-purple);
+  border: 4px solid var(--main-electric-purple);
+  color: black;
+  box-shadow: 2px 2px 2px black;
+
 }
 
 /* globals.css */
@@ -54,25 +80,14 @@ body {
   background-color: #f8f9fa;
 }
 
-#kazamLogo {
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffea00;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-header img {
-  height: 5rem;
+.kazamLogo {
+  height: 10rem;
   width: auto;
+  padding: 0.25rem;
 }
 
 nav a {
-  color: white;
-  text-shadow: 1px 1px 3px black;
+  color: black;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -105,6 +120,9 @@ footer {
 .main-nav-bar {
   min-height: 5vh;
 
+  position: sticky;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -124,6 +142,44 @@ footer {
   animation: appear 250ms ease-in;
 }
 
+.product-form {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  background-color: orange;
+}
+
+.product-form input,
+.product-form select,
+.product-form textarea {
+  width: 70%;
+  padding: 0.1rem;
+  padding-left: 0.2rem;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.product-form button {
+  align-self: center;
+  width: 10rem;
+  border: 2px solid var(--main-electric-purple);
+  padding: 0.25rem;
+  background-color: var(--secondary-mauve-purple);
+}
+
+.product-form button:hover {
+  border: 2px solid var(--secondary-mauve-purple);
+  background-color: var(--main-electric-purple);
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+
+.category-product-container {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
 @keyframes appear {
   from {
     opacity: 10%;
@@ -135,52 +191,27 @@ footer {
 
 @media (min-width: 768px) {
   header {
-    height: 15vh;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-  }
-
-  header img {
-    height: 5rem;
-  }
-
-  nav {
-    height: 5vh;
-  }
-
-  #topButtons {
-    height: 1vh;
     display: flex;
     justify-content: space-between;
-    top: 0;
+    align-items: center;
+    padding: 0.25rem;
+  }
+
+  .userHeaderContainer {
+    display: flex;
+    flex-direction: column;
   }
 
   .individual-product-card {
     min-width: 15rem;
   }
 
-  .description {
-    position: relative;
+  .category-product-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   footer {
     padding: 2rem;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  label {
-    margin-right: 10px;
-  }
-
-  input {
-    padding: 5px;
-    font-size: 16px;
   }
 
   button {

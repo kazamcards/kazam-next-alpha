@@ -50,7 +50,7 @@ export default async function ProductDisplay(props: {
                 ADD TO BASKET BUTTON
               </p>
             ) : null}
-            <div className="description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1 nset-y-0 right-0">
+            <div className="description flex flex-col gap-2 justify-start w-full border-t border-b mt-1 mb-1">
               <h2>Product Details</h2>
               <p>{product.era}</p>
               <p>{product.set}</p>

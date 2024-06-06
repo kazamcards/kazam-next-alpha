@@ -13,20 +13,21 @@ import { recentlyAdded } from "./lib/RecentlyAdded";
 export default function Home() {
   return (
     <>
-      <main>
-        <h2 className="text-center"> Recently Added</h2>
-        <div className="recently-added border border-black  h-auto overflow-scroll">
-          <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
+      <main className="bg-gray-100 min-h-screen p-4">
+        <h2 className="text-center text-2xl font-bold mb-4">Recently Added</h2>
+        <div className="recently-added border-4 border-black h-auto overflow-scroll p-4 bg-[--secondary-uranian-blue]">
+          <div className="recently-added-container flex flex-row gap-4 ">
             <ProductDisplay fetchProducts={recentlyAdded} />
           </div>
         </div>
-        <h2 className="text-center"> Top Sellers </h2>
-        <div className="top-sellers border border-black h-96 overflow-scroll">
-          <h3>
-            This is currently showing all products only from Sword and Shield
-            era
-          </h3>
-          <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
+        <h2 className="text-center text-2xl font-bold my-4">
+          Current Sword & Shield Products
+        </h2>
+        <h3 className="text-center">
+          This is currently showing all products only from Sword and Shield era
+        </h3>
+        <div className="top-sellers border-4 border-black overflow-scroll p-4  bg-[--secondary-uranian-blue]">
+          <div className="recently-added-container flex flex-row gap-4">
             <ProductDisplay fetchProducts={async () => await queryEra(2)} />
           </div>
         </div>

@@ -16,11 +16,23 @@
   visibility: hidden;
 }
 
-#topButtons {
-  height: 1vh;
-  display: flex;
-  justify-content: space-between;
-  max-height: 4.5rem;
+.userHeaderContainer {
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+
+  background-color: var(--secondary-mauve-purple);
+}
+
+.adminConsoleButton {
+  background-color: var(--secondary-mauve-purple);
+  border-radius: 0.5rem;
+}
+
+.adminConsoleButton:hover {
+  box-shadow: 2px 2px 2px black;
+  border: 1px solid var(--tertiary-coral-orange);
+  color: var(--tertiary-madder-red);
 }
 
 header {
@@ -29,14 +41,28 @@ header {
 }
 
 .product-card {
-  min-width: 15rem;
+  min-width: 18rem;
+  padding: 0.5rem;
+  border: 3px solid black;
 }
 
 .product-card:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  transform: scale(1.025);
+  /* transform: scale(1.025); */
+  border: 3px solid var(--main-electric-purple);
+  box-shadow: 2px 2px 2px black;
+}
 
+.product-image:hover {
+  box-shadow: 2px 2px 2px black;
+}
+
+.basket-button:hover {
+  background-color: var(--secondary-mauve-purple);
+  border: 4px solid var(--main-electric-purple);
+  color: black;
+  box-shadow: 2px 2px 2px black;
 }
 
 /* globals.css */
@@ -54,20 +80,10 @@ body {
   background-color: #f8f9fa;
 }
 
-#kazamLogo {
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffea00;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-header img {
-  height: 5rem;
+.kazamLogo {
+  height: 10rem;
   width: auto;
+  padding: 0.25rem;
 }
 
 nav a {
@@ -135,25 +151,19 @@ footer {
 
 @media (min-width: 768px) {
   header {
-    height: 15vh;
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
-    padding: 2rem;
-  }
-
-  header img {
-    height: 5rem;
+    align-items: center;
+    padding: 0.25rem;
   }
 
   nav {
     height: 5vh;
   }
 
-  #topButtons {
-    height: 1vh;
+  .userHeaderContainer {
     display: flex;
-    justify-content: space-between;
-    top: 0;
+    flex-direction: column;
   }
 
   .individual-product-card {

@@ -224,8 +224,3 @@ footer {
     cursor: pointer;
   }
 }
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px; /* Adjust the gap between items as needed */
-}

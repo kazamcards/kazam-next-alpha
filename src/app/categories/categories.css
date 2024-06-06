@@ -1,0 +1,14 @@
+.back-to-all-link {
+  background-color: var(--secondary-mauve-purple);
+  margin: 1rem;
+  padding: 1rem;
+  max-width: fit-content;
+  border-radius: 0.5rem;
+  border: 2px solid var(--main-electric-purple);
+}
+
+.back-to-all-link:hover {
+  color: var(--tertiary-madder-red);
+  border: 2px solid var(--tertiary-coral-orange);
+  box-shadow: 2px 2px 2px black;
+}

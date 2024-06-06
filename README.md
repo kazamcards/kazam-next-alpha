@@ -14,5 +14,5 @@ Bugs:
     Status: Resolved.
 
 2.  Problem: Deployments failing.
-    Cause: Errors in TypeScript - params in the indivdual product page was being flagged for its type not being declared.
-    Status: Testing.
+    Cause: Errors in TypeScript. Numerous types not being declared has prevented this project from deploying.
+    Status: Unresolved, but in progress.

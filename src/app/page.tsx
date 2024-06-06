@@ -22,10 +22,10 @@ export default function Home() {
         </div>
         <h2 className="text-center"> Top Sellers </h2>
         <div className="top-sellers border border-black h-96 overflow-scroll">
-          <h3>
+          {/* <h3>
             This is currently showing all products only from Sword and Shield
             era
-          </h3>
+          </h3> */}
           <div className="recently-added-container flex flex-row gap-2 pl-2 pb-4">
             <ProductDisplay fetchProducts={async () => await queryEra(2)} />
           </div>

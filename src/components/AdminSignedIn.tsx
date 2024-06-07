@@ -10,8 +10,10 @@ const AdminSignedIn = async ({
 
   const { data, error } = await supabase.auth.getUser();
 
+  const aEmails = await adminEmails();
+
   const userEmail = data.user?.email;
-  if (typeof userEmail === "string" && adminEmails.includes(userEmail)) {
+  if (typeof userEmail === "string" && aEmails.includes(userEmail)) {
     return <>{children}</>;
   }
   return null;

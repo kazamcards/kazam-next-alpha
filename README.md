@@ -14,8 +14,17 @@ This repo is a rewrite and modern refresh of the trading card sales website [Kaz
 
 # Before and After
 
+**Before**
+
 ![before of the website](<public/images/(readme-images)/before-kazam.png>)
+
+**After**
+
 ![after of the website](<public/images/(readme-images)/after-kazam.png>)
+
+# Instructions
+
+_Not all sensitive information will be included as this project is for a client, however here's some instructions to get set up for yourself_
 
 # User Stories
 

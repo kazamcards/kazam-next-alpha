@@ -8,6 +8,8 @@ It served as the final Week 12 Project for the team members below, who were on t
 
 **Live link:** https://kazam-next-alpha.vercel.app/
 
+We completed our task remaining fully remote. We co-ordinated planning and tasks through Figma and Jira, and communication via Google Meet and Discord _(See bottom of README for visuals)_
+
 ### Team Members
 
 - [Connor Lansdown](https://github.com/MopeyHippo)
@@ -144,6 +146,10 @@ _Not all sensitive information will be included as this project is for a client,
 
     - Status: Unresolved.
 
+3.  Problem: Authentication was an issue from start to finish.
+
+    - Status: Resolved for the project. Auth.js was difficult to implement when trying to integrate with Supabase, which led us to finding out about Supabases integrated Auth.
+
 # Bugs
 
 1.  Problem: Footer appears twice.
@@ -158,6 +164,31 @@ _Not all sensitive information will be included as this project is for a client,
 
     - Status: Resolved. Lots of TypeScripting added, and some `time-sink ignore` added too _(`@ts-ignore`)_
 
+# Extras
+
 ## Resources
 
 - [Pokeball Loading Spinner](https://codepen.io/vinztt/pen/XjEyvZ)
+
+- Inspiration from [Chaos Cards](https://www.chaoscards.co.uk/shop/card-games/pokemon)
+
+- Inspiration from [Total Cards](https://totalcards.net/collections/pokemon)
+
+- [Auth.js Docs](https://authjs.dev/guides/role-based-access-control)
+
+## Planning Visuals
+
+**Jira Sprints**
+![jira image of sprints](<public/images/(readme-images)/jira-sprints.png>)
+
+**Jira Boards**
+![jira image of boards](<public/images/(readme-images)/jira-boards.png>)
+
+**Jira Resources**
+![jira image of resources](<public/images/(readme-images)/jira-resources.png>)
+
+**Figma Overall View**
+![figma image of our whole board](<public/images/(readme-images)/figma-birds-eye.png>)
+
+**Figma Wireframes**
+![figma image of the wireframes](<public/images/(readme-images)/figma-wireframes.png>)

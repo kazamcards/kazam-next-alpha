@@ -26,6 +26,8 @@ It served as the final Week 12 Project for the team members below, who were on t
 
 ![after of the website](<public/images/(readme-images)/after-kazam.png>)
 
+---
+
 # Features!
 
 - You can see the most Recently Added products, and scroll the latest 10.
@@ -34,6 +36,8 @@ It served as the final Week 12 Project for the team members below, who were on t
 - Beautiful dynamically rendered `Categories` and `Eras` drop down menus, with `All Categories/Eras` pages, and also dynamic routes for the `Categories`/`Eras`. Woah! Just click them!
 - A user can create an account on the site.
 - An admin would be able to see a button to access an "Admin Console", which would let them input new products to the database.
+
+---
 
 # Instructions
 
@@ -73,22 +77,86 @@ _Not all sensitive information will be included as this project is for a client,
 
 # User Stories
 
-Issues:
+- As an admin I want to add new sets.
+
+- As an admin I want to upload new products, ideally with: images, description, sale price, buy in cost, stock count, SKU, delivery charges, special offers.
+
+- As an admin I want to create categories to organise stock, so the website can load different categories for different shop pages.
+
+- As an admin I want to create special offers for a category as well as for individual items.
+
+- As an admin I want to create emails to send to members about products.
+
+- As a user, I want to be able to register for membership (IE users can make an account on the website).
+
+- As a user I want to be able to browse the different categories of available products.
+
+- As a user I want to be able to make an account which can track my purchase history.
+
+- As a user I want to be able to see my basket, and have it save my basket between visits (IE if I close my tab).
+
+- As a user I want to be able to buy nice shiny things!!!!
+
+- As a user I want to be able to see all affiliated links in one place: Instagram, facebook etc. (See the bottom of the page - that’s what we’re tidying up!)
+
+---
+
+# MVP - Minimum Viable Product Goals
+
+1. A modern website design
+
+   - Sleek UI, basic UX like hover effects.
+   - Nice colour scheme.
+   - Good visual hierarchy.
+   - Separate pages for about, products? etc.
+   - To give off a more trustworthy feeling
+
+2. A backend database which contains
+
+   - Individual products
+   - Categories for sealed products, singles being part of ‘sword shield’/’scarlet violet’ etc
+   - Plus their sub sets, editions, promo singles, non-card products IE storage
+
+3. A user can browse the website. And add to basket (MVP = sealed products) _(Note: this wasn't achieved, but we got close with some dummy buttons and a fancy basket icon!)_
+
+4. An admin can add products to the site.
+
+- Functionality all in all:
+  - Back end has products, with categories
+  - Front end has browseable and searchable products
+  - Front end has browseable categories
+  - An admin can log in
+    - Can add new products
+    - Can edit existing products
+  - A user can log in
+    - Can add items to their cart
+    - Can eventually purchase products
+
+---
+
+# Issues
 
 1.  Problem: Upon Isaac joining the group, we realised that he could not be added to the Jira without Katya's approval. At the time, she was on leave from the project and could not be quickly contacted.
-    Status: Resolved. Katya approved the join request via mobile when notified.
-2.  Problem: We're too neurodivergent for this and keep getting distracted.
-    Status: Unresolved.
 
-Bugs:
+    - Status: Resolved. Katya approved the join request via mobile when notified.
+
+2.  Problem: We're too neurodivergent for this and keep getting distracted.
+
+    - Status: Unresolved.
+
+# Bugs
 
 1.  Problem: Footer appears twice.
-    Cause: Footer was in both the layout.tsx but also manually included on the homepage.
-    Status: Resolved.
+
+    - Cause: Footer was in both the layout.tsx but also manually included on the homepage.
+
+    - Status: Resolved.
 
 2.  Problem: Deployments failing.
-    Cause: Errors in TypeScript - params in the indivdual product page was being flagged for its type not being declared.
-    Status: Testing.
+
+    - Cause: Errors in TypeScript - params in the indivdual product page was being flagged for its type not being declared.
+
+    - Status: Resolved. Lots of TypeScripting added, and some `time-sink ignore` added too _(`@ts-ignore`)_
 
 ## Resources
 

@@ -4,6 +4,8 @@
 
 This repo is a rewrite and modern refresh of the trading card sales website [Kazam Cards](https://www.kazamcards.co.uk/).
 
+It served as the final Week 12 Project for the team members below, who were on the [Tech Educators Software Development Bootcamp](https://techeducators.co.uk/)
+
 **Live link:** https://kazam-next-alpha.vercel.app/
 
 ### Team Members
@@ -40,8 +42,9 @@ _Not all sensitive information will be included as this project is for a client,
 1. Fork this repo and clone it to your local machine.
 
 2. Set up your database _(We used Supabase in this instance, and Supabase also handles user login information)_ with the seed.sql file. This will give you your products, and other tables.
-   The `seed.sql` is incomplete and you will need to fill in the gaps. The `seed.sql` was made early in the project and the database has been modified since then.
-   The 'descriptions' and 'image_url' columns are missing from the `CREATE` statements and also the `INSERT` statements.
+
+   - The `seed.sql` is incomplete and you will need to fill in the gaps. - The `seed.sql` was made early in the project and the database has been modified since then.
+   - The 'descriptions' and 'image_url' columns are missing from the `CREATE` statements and also the `INSERT` statements.
 
 3. Set up your .env variables with these keys _(and get your own values!)_:
 
@@ -61,7 +64,8 @@ _Not all sensitive information will be included as this project is for a client,
 5. By this point you should hopefully be able to see the website working
 
 6. You will have to connect your Supabase `Authentication` area to your project.
-   [The Supabase docs are actually quite good to follow for this](https://supabase.com/docs/guides/auth/quickstarts/nextjs)
+
+   - [The Supabase docs are actually quite good to follow for this](https://supabase.com/docs/guides/auth/quickstarts/nextjs)
 
 7. And then define an `admins` table, which contains a column for admin email addresses. This will be checked by the `<AdminSignedIn>` component.
 

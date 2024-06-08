@@ -2,7 +2,7 @@ import { createClient } from "@/utils/supabase/server";
 import { adminEmails } from "@/adminEmails";
 
 const AdminSignedIn = async ({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
